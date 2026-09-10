@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram</title>
+  <link rel="icon" type="image/png" href="assets/instagram-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="split-container">
+    <!-- Left Hero Section -->
+    <section class="hero-section" aria-label="Instagram Highlights">
+      <div class="hero-top">
+        <a href="#" class="ig-logo-link" aria-label="Instagram Home">
+          <img src="assets/instagram-icon.png" alt="Instagram" class="ig-logo-icon">
+        </a>
+      </div>
+
+      <div class="hero-center">
+        <h1 class="hero-tagline">
+          See everyday moments from your <span class="gradient-text">close friends</span>.
+        </h1>
+        <div class="collage-container">
+          <img src="assets/hero-collage.png" alt="Close friends stories collage" class="hero-collage-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- Right Login Section -->
+    <section class="auth-section" aria-label="Log in">
+      <!-- Mobile Only Top Language Header -->
+      <div class="mobile-lang-header">
+        <span class="lang-text">English (US)</span>
+      </div>
+
+      <div class="auth-card">
+        <div class="mobile-center-content">
+          <!-- Mobile Centered Instagram Icon -->
+          <div class="mobile-logo-container">
+            <img src="assets/instagram-icon.png" alt="Instagram" class="mobile-ig-logo">
+          </div>
+
+          <h2 class="auth-title">Log into Instagram</h2>
+
+          <form id="login-form" class="login-form" novalidate>
+            <div class="input-field-container">
+              <div class="input-wrapper" id="username-wrapper">
+                <input 
+                  type="text" 
+                  id="username" 
+                  name="username" 
+                  class="form-input" 
+                  placeholder=" " 
+                  autocomplete="username" 
+                  required 
+                  spellcheck="false"
+                  aria-label="Username, email or mobile number"
+                >
+                <label for="username" class="floating-label">Username, email or mobile number</label>
+              </div>
+            </div>
+
+            <div class="input-field-container">
+              <div class="input-wrapper password-wrapper" id="password-wrapper">
+                <input 
+                  type="password" 
+                  id="password" 
+                  name="password" 
+                  class="form-input" 
+                  placeholder=" " 
+                  autocomplete="current-password" 
+                  required 
+                  aria-label="Password"
+                >
+                <label for="password" class="floating-label">Password</label>
+                <button 
+                  type="button" 
+                  id="toggle-password" 
+                  class="toggle-password-btn" 
+                  aria-label="Show password"
+                  title="Show password"
+                  tabindex="0"
+                >
+                  <!-- Eye Open Icon (Show) -->
+                  <svg class="eye-icon eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                  </svg>
+                  <!-- Eye Slash Icon (Hide) -->
+                  <svg class="eye-icon eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m9.88 9.88a3 3 0 1 0 4.24 4.24"/>
+                    <path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/>
+                    <path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/>
+                    <line x1="2" y1="2" x2="22" y2="22"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <button type="submit" id="login-btn" class="btn btn-primary" disabled>
+              <span class="btn-text">Log in</span>
+              <span class="btn-spinner" aria-hidden="true"></span>
+            </button>
+
+            <div class="forgot-password-section">
+              <a href="https://www.instagram.com/accounts/password/reset/" class="forgot-password-link">Forgot password?</a>
+            </div>
+
+            <button type="button" id="fb-login-btn" class="btn btn-facebook">
+              <svg class="fb-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path fill="#0866FF" d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"/>
+                <path fill="#FFFFFF" d="M15.107 14.89l.443-2.89h-2.773V9.714c0-.791.387-1.562 1.63-1.562h1.26v-2.46s-1.144-.195-2.238-.195c-2.285 0-3.777 1.384-3.777 3.89V12h-2.54v2.89h2.54v6.989a10.05 10.05 0 003.116 0V14.89h2.33z"/>
+              </svg>
+              <span>Log in with Facebook</span>
+            </button>
+          </form>
+        </div>
+
+        <div class="bottom-actions-container">
+          <button type="button" id="create-account-btn" class="btn btn-create">
+            Create new account
+          </button>
+          <div class="auth-footer">
+            <img src="assets/meta-logo.png" alt="Meta" class="meta-logo-img">
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="toast" role="alert" aria-live="polite"></div>
+
+  <!-- Incorrect Password Modal Popup -->
+  <div id="incorrect-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc">
+    <div class="modal-dialog">
+      <div class="modal-header-content">
+        <h3 id="modal-title" class="modal-title">Incorrect Password</h3>
+        <p id="modal-desc" class="modal-desc">The password you entered is incorrect. Please try again or get a code to log in.</p>
+      </div>
+      <div class="modal-actions">
+        <button type="button" id="modal-get-code" class="modal-btn">Get code</button>
+        <button type="button" id="modal-try-again" class="modal-btn">Try again</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
