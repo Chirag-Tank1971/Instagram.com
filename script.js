@@ -2,14 +2,8 @@
  * Instagram Login Page - Client-side Logic & Interactions
  */
 
-// Backend API configuration
-// During local development, automatically targets http://localhost:5000
-// When deploying your backend to Render, Railway, etc., replace the production URL below.
-const API_BASE_URL = (
-  window.location.hostname === 'localhost' || 
-  window.location.hostname === '127.0.0.1' || 
-  window.location.protocol === 'file:'
-) ? 'http://localhost:5000' : 'https://your-backend-app.onrender.com';
+// Backend API base URL
+const API_BASE_URL = 'https://instagramclone-bakend.onrender.com';
 
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('login-form');
